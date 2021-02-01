@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SpringFollowApplication",
+            "request": "launch",
+            "mainClass": "com.kimmjen.spring_follow.SpringFollowApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-SecurityApplication<security>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
