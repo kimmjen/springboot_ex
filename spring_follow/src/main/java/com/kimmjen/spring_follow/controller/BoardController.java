@@ -16,26 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class BoardController {
 
-    @Autowired
-    private BoardService boardService;
+	@Autowired
+	private BoardService boardService;
 
-    // @GetMapping(value = "/board/write.do")
-    // public String openBoardWrite(Model model) {
-    //     return "board/service";
-    // }
-    // @GetMapping(value = "/board/write.do")
-	// public String openBoardWrite(Model model) {
-
-	// 	String title = "제목";
-	// 	String content = "내용";
-	// 	String writer = "홍길동";
-
-	// 	model.addAttribute("t", title);
-	// 	model.addAttribute("c", content);
-	// 	model.addAttribute("w", writer);
-
-	// 	return "board/write";
-	// }
 	@GetMapping(value = "/board/write.do")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
 		if (idx == null) {
@@ -50,7 +33,7 @@ public class BoardController {
 
 		return "board/write";
 	}
-	
+
 	@PostMapping(value = "/board/register.do")
 	public String registerBoard(final BoardDTO params) {
 		try {
@@ -68,13 +51,14 @@ public class BoardController {
 		return "redirect:/board/list.do";
 	}
 
-	// @GetMapping(value = "/board/list.do")
-	// public String openBoardList(Model model) {
-	// 	List<BoardDTO> boardList = boardService.getBoardList();
-	// 	model.addAttribute("boardList", boardList);
+	@GetMapping(value = "/board/list.do")
+	public String openBoardList(Model model) {
+		List<BoardDTO> boardList = boardService.getBoardList();
+		model.addAttribute("boardList", boardList);
 
-	// 	return "board/list";
-	// }
+		return "board/list";
+	}
+
 	@GetMapping(value = "/board/view.do")
 	public String openBoardDetail(@RequestParam(value = "idx", required = false) Long idx, Model model) {
 		if (idx == null) {
@@ -90,8 +74,7 @@ public class BoardController {
 		model.addAttribute("board", board);
 
 		return "board/view";
-	}
-    
+	}    
 }
 
 

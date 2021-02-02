@@ -25,6 +25,16 @@
             "mainClass": "com.kimmjen.back.BackApplication",
             "projectName": "back",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringFollowApplication<spring_follow>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.kimmjen.spring_follow.SpringFollowApplication",
+            "projectName": "spring_follow",
+            "args": ""
         }
     ]
 }
