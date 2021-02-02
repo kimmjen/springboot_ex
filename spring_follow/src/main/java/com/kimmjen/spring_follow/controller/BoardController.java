@@ -48,6 +48,7 @@ public class BoardController {
 
 		return "board/write";
 	}
+	
 	@PostMapping(value = "/board/register.do")
 	public String registerBoard(final BoardDTO params) {
 		try {
