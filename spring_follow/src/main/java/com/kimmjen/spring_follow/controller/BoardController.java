@@ -1,5 +1,7 @@
 package com.kimmjen.spring_follow.controller;
 
+import java.util.List;
+
 import com.kimmjen.spring_follow.domain.BoardDTO;
 import com.kimmjen.spring_follow.service.BoardService;
 
@@ -64,6 +66,14 @@ public class BoardController {
 		}
 
 		return "redirect:/board/list.do";
+	}
+
+	@GetMapping(value = "/board/list.do")
+	public String openBoardList(Model model) {
+		List<BoardDTO> boardList = boardService.getBoardList();
+		model.addAttribute("boardList", boardList);
+
+		return "board/list";
 	}
     
 }
