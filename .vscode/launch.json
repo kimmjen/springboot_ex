@@ -35,6 +35,26 @@
             "mainClass": "com.kimmjen.spring_follow.SpringFollowApplication",
             "projectName": "spring_follow",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EcommerceApplication<ecommerce>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "kimmjen.ecommerce.EcommerceApplication",
+            "projectName": "ecommerce",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ExampleApplication<example>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.kimmjen.example.ExampleApplication",
+            "projectName": "example",
+            "args": ""
         }
     ]
 }
